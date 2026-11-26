@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "polycracker-ecu"
-version = "1.0.0.post1"
+version = "1.0.0.post2"
 description = "Local CLI wrapper and release installer for Polycracker ECU - deterministic Python AST token compression."
 readme = "README.md"
 requires-python = ">=3.10"
