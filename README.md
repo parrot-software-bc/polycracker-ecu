@@ -14,7 +14,7 @@ Most context harnesses hand you a bloated middleware suite with a static trimmer
 
 We don't sell dashboard vanity metrics or ask you to take 95% claims on faith. Run it against your own repo, your own prompts, and your own provider invoice. Every byte in and every byte out is verifiable.
 
-It ships ready to rip out of the box with a balanced **30-day Stage 2 Track Spec base tune**. When you want full manual control instead of auto-magic guessing, open the **[Tuning House](https://portal.polycracker.dev/dashboard/tuning-house)**, dial in **8 macro sliders and 36 micro-dials** (right down to raw JSON trimming), and flash an offline **Ed25519-signed `tune.jwt`** straight to your machine.
+It ships ready to rip out of the box with a free **30-day Stage 2 Track Spec base tune**—no account required. When you want full manual control instead of auto-magic guessing, sign up for a free **$0 Sandbox** account (includes **$5 in Polycracker credits**), open the **[Tuning House](https://portal.polycracker.dev/dashboard/tuning-house)** to test **8 macro sliders, 36 micro-dials, raw JSON trimming, and the live Dyno Preview**, and upgrade whenever you're ready to export custom offline **Ed25519-signed `tune.jwt`** maps.
 
 ---
 
@@ -89,7 +89,7 @@ Knock Status:     Monitored upfront via context-drift telemetry (zero blind cuts
 pip install polycracker-ecu
 ```
 
-2. **Download, SHA-256 verify, and extract `Polycracker-ECU.exe` + provision your 30-day Stage 2 Track Spec trial tune:**
+2. **Download, SHA-256 verify, and extract `Polycracker-ECU.exe` + provision your free 30-day Stage 2 Track Spec trial tune:**
 
 ```powershell
 polycracker-ecu install
@@ -107,13 +107,14 @@ polycracker-ecu run
 
 ## 🎛️ The Tuning House & `tune.jwt`
 
-Out of the box, `polycracker-ecu install` provisions a balanced **30-day Stage 2 Track Spec** base tune so you can start testing immediately without touching a single dial.
+Out of the box, `polycracker-ecu install` provisions a free, balanced **30-day Stage 2 Track Spec** base tune so you can start testing locally right away—no signup required.
 
-When you want explicit control instead of black-box auto-magic, head to the **[Tuning House](https://portal.polycracker.dev/dashboard/tuning-house)**:
+When you want explicit control over every parameter instead of black-box auto-magic:
 
-* **8 Macro Sliders & 36 Micro-Dials:** Dial in everything from broad compression aggressiveness down to granular AST stripping rules and **raw JSON trimming**.
-* **🔐 Offline Ed25519-Signed `tune.jwt`:** The Tuning House compiles your exact configuration into a lightweight, cryptographically signed `tune.jwt` calibration file. Drop it on your machine and it runs **100% offline**—no phone-home required.
-* **Flash a Custom Map in Seconds:** Once you download your `tune.jwt`, flash it to your local ECU:
+1. **Sign up for the Free `$0` Sandbox:** Creating an account at **[Polycracker](https://portal.polycracker.dev/dashboard/tuning-house)** automatically places you on the **$0 Sandbox** with **$5 in Polycracker credits**—no credit card needed to explore.
+2. **Test-Drive the Tuning House & Live Dyno Preview:** Inside the Tuning House, you get full access to **8 macro sliders**, **36 micro-dials**, and **raw JSON trimming** controls, paired with a **live Dyno Preview** that shows estimated token savings and knock/risk telemetry in real time.
+3. **Export Offline `tune.jwt` Maps (Paid Plans):** Exporting and downloading custom **Ed25519-signed `tune.jwt`** calibration files (macro slider, micro-dial, or JSON tunes) is available on paid subscription tiers. Once exported, your `tune.jwt` runs **100% offline** on your machine—no phone-home required.
+4. **Flash a Custom Map in Seconds:**
 
 ```powershell
 polycracker-ecu tune --file .\Downloads\tune.jwt
