@@ -1,0 +1,31 @@
+﻿[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polycracker-ecu"
+version = "1.0.0"
+description = "Local CLI wrapper and release installer for Polycracker ECU - deterministic Python AST token compression."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Parrot Integrated Software Development", email = "parrotsoftwarebc@gmail.com" }]
+keywords = ["llm", "mcp", "ast", "token-compression", "polycracker"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://ecu.polycracker.dev"
+"Tuning House" = "https://portal.polycracker.dev/dashboard/tuning-house"
+Repository = "https://github.com/parrot-software-bc/polycracker-ecu"
+
+[project.scripts]
+polycracker-ecu = "polycracker_ecu.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

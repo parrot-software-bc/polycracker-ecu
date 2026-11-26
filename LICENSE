@@ -1,0 +1,12 @@
+﻿Polycracker ECU - Split License Notice
+
+1. CLI Wrapper Source Code (this repository)
+Copyright (c) 2026 Parrot Integrated Software Development
+Licensed under the MIT License. You may use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Python CLI wrapper code in
+this repository, subject to retaining this copyright and permission notice.
+
+2. Compiled Polycracker ECU Binaries (GitHub Releases)
+Polycracker-ECU.exe and its bundled runtime assets distributed via GitHub
+Releases are proprietary software owned by Parrot Integrated Software
+Development and are governed by the EULA.txt included in the release archive.
