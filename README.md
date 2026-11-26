@@ -1,17 +1,34 @@
-﻿# Polycracker ECU
+# Polycracker ECU
 
 Local CLI wrapper and release installer for **Polycracker ECU** - deterministic, surgical Python AST token compression on your workstation via local stdio MCP.
 
-- **Zero cloud code upload:** Compression runs locally on your machine.
-- **Free 30-day Stage 2 Track Spec trial:** Provisioned automatically during `polycracker-ecu install`.
-- **Tuning House:** Customize 8 macro sliders and 36 micro-dials into offline Ed25519-signed `tune.jwt` calibration maps at [portal.polycracker.dev/dashboard/tuning-house](https://portal.polycracker.dev/dashboard/tuning-house).
+- **Local-first compression:** Runs on your machine with zero cloud code upload.
+- **30-day Stage 2 Track Spec trial:** Provisioned automatically during polycracker-ecu install (or via polycracker-ecu tune).
+- **Tuning House:** Customize 8 macro sliders and 36 micro-dials into offline Ed25519-signed 	une.jwt calibration maps in the [Tuning House](https://portal.polycracker.dev/dashboard/tuning-house), then flash them locally.
 
 ## Quick Start (Windows x64)
 
-    pip install polycracker-ecu
-    polycracker-ecu install
-    polycracker-ecu wrap
+1. Install the open-source CLI wrapper:
 
-### Flash a Custom Tune
+    pip install polycracker-ecu
+
+2. Download, verify, and extract Polycracker-ECU.exe + provision your 30-day Stage 2 trial tune:
+
+    polycracker-ecu install
+
+3. Start the local ECU / MCP server:
+
+    polycracker-ecu run
+
+*(Testing from a local clone before PyPI release? Run pip install -e . in step 1.)*
+
+## Custom Tunes
+
+Flash a signed calibration map exported from the [Tuning House](https://portal.polycracker.dev/dashboard/tuning-house):
 
     polycracker-ecu tune --file path/to/tune.jwt
+
+## License
+
+- **CLI wrapper (src/polycracker_ecu/):** MIT License.
+- **Compiled binary & release assets (Polycracker-ECU.exe, EULA.txt, PRIVACY.txt):** Proprietary - Parrot Integrated Software Development.

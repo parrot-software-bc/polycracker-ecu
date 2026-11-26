@@ -1,4 +1,4 @@
-﻿import argparse
+import argparse
 import hashlib
 import json
 import platform
@@ -137,7 +137,7 @@ def cmd_install(args: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_wrap(args: argparse.Namespace) -> int:
+def cmd_run(args: argparse.Namespace) -> int:
     exe_path = INSTALL_DIR / EXE_NAME
     if not exe_path.exists():
         print("Polycracker ECU is not installed. Run: polycracker-ecu install", file=sys.stderr)
@@ -163,9 +163,9 @@ def main() -> int:
     p_tune.add_argument("--file", help="Path to a custom tune.jwt downloaded from the Tuning House.")
     p_tune.set_defaults(func=cmd_tune)
 
-    p_wrap = sub.add_parser("wrap", help="Launch Polycracker-ECU.exe (forwards stdio and arguments).")
-    p_wrap.add_argument("ecu_args", nargs=argparse.REMAINDER, help="Arguments forwarded to Polycracker-ECU.exe.")
-    p_wrap.set_defaults(func=cmd_wrap)
+    p_run = sub.add_parser("run", help="Start Polycracker-ECU.exe locally (forwards stdio and arguments).")
+    p_run.add_argument("ecu_args", nargs=argparse.REMAINDER, help="Arguments forwarded to Polycracker-ECU.exe.")
+    p_run.set_defaults(func=cmd_run)
 
     args = parser.parse_args()
     return args.func(args)
