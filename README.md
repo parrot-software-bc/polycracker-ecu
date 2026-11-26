@@ -4,7 +4,7 @@ Local CLI wrapper and release installer for **Polycracker ECU** - deterministic,
 
 - **Local-first compression:** Runs on your machine with zero cloud code upload.
 - **30-day Stage 2 Track Spec trial:** Provisioned automatically during polycracker-ecu install (or via polycracker-ecu tune).
-- **Tuning House:** Customize 8 macro sliders and 36 micro-dials into offline Ed25519-signed 	une.jwt calibration maps in the [Tuning House](https://portal.polycracker.dev/dashboard/tuning-house), then flash them locally.
+- **Tuning House:** Customize 8 macro sliders and 36 micro-dials into offline Ed25519-signed 	une.jwt calibration maps in the [Tuning House](https://portal.polycracker.dev/dashboard/tuning-house), then apply them locally.
 
 ## Quick Start (Windows x64)
 
@@ -24,9 +24,7 @@ Local CLI wrapper and release installer for **Polycracker ECU** - deterministic,
 
 ## Custom Tunes
 
-Flash a signed calibration map exported from the [Tuning House](https://portal.polycracker.dev/dashboard/tuning-house):
-
-    polycracker-ecu tune --file path/to/tune.jwt
+The [Tuning House](https://portal.polycracker.dev/dashboard/tuning-house) lets you shape how aggressively Polycracker-ECU.exe compresses code using 8 macro sliders and 36 micro-dials, then exports a signed 	une.jwt calibration file you can download to your computer. Once you have a downloaded tune file, apply it with polycracker-ecu tune --file <path-to-tune.jwt> (for example, polycracker-ecu tune --file .\Downloads\tune.jwt) so your local installation uses that map instead of the default trial tune.
 
 ## Reopen & Uninstall
 
