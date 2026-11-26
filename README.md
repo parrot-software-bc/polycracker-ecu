@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20x64-0078D6?style=for-the-badge&logo=windows&logoColor=white)](#quick-start-windows-x64)
 [![Execution](https://img.shields.io/badge/Execution-100%25%20Local-2EA043?style=for-the-badge)](#universal-local-hookup)
 [![Interface](https://img.shields.io/badge/Interface-Proxy%20%2B%20MCP-6E40C9?style=for-the-badge)](#universal-local-hookup)
-[![License](https://img.shields.io/badge/CLI-MIT%20%7C%20Core-Proprietary-555555?style=for-the-badge)](#license)
+[![License](https://img.shields.io/badge/License-MIT%20CLI%20%26%20Proprietary%20Core-555555?style=for-the-badge)](#license)
 
 **Stop letting blind, one-size-fits-all pruners chop up your context and bill you for the wreckage.**
 
