@@ -28,6 +28,22 @@ Flash a signed calibration map exported from the [Tuning House](https://portal.p
 
     polycracker-ecu tune --file path/to/tune.jwt
 
+## Reopen & Uninstall
+
+Exiting from the system tray stops the active process without deleting your installation or 	une.jwt.
+
+- **Reopen after closing the tray:**
+
+    polycracker-ecu run
+
+- **Delete Polycracker-ECU.exe and its installed files** (close from the tray first):
+
+    Remove-Item "C:\Users\npare\.polycracker-ecu\v1.0.0" -Recurse -Force
+
+- **Remove the Python CLI wrapper as well:**
+
+    pip uninstall polycracker-ecu
+
 ## License
 
 - **CLI wrapper (src/polycracker_ecu/):** MIT License.
