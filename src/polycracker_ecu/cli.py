@@ -1,4 +1,4 @@
-import argparse
+﻿import argparse
 import hashlib
 import json
 import platform
@@ -15,9 +15,9 @@ from . import __version__
 
 RELEASE_URL = (
     "https://github.com/parrot-software-bc/polycracker-ecu/"
-    "releases/download/v1.0.0/polycracker-ecu-v1.0.0-win64.zip"
+    "releases/download/v1.1.0/polycracker-ecu-v1.1.0-win64.zip"
 )
-RELEASE_SHA256 = "C2806A5F8A2228D60095D76ACF97E9CA312D9A046A37413B92BB5818353AC325"
+RELEASE_SHA256 = "27AE72F47AF7FAC1351CBB9817B8AC89601E1DA1252B75A4CE8543CC49709E8E"
 TRIAL_ENDPOINT = "https://portal.polycracker.dev/api/v1/trial-tune"
 INSTALL_DIR = Path.home() / ".polycracker-ecu" / f"v{__version__}"
 EXE_NAME = "Polycracker-ECU.exe"
@@ -103,11 +103,11 @@ def cmd_tune(args: argparse.Namespace) -> int:
 
 def cmd_install(args: argparse.Namespace) -> int:
     if platform.system() != "Windows":
-        print("Polycracker ECU v1.0.0 binaries are currently Windows x64 only.", file=sys.stderr)
+        print("Polycracker ECU v1.1.0 binaries are currently Windows x64 only.", file=sys.stderr)
         return 1
 
     INSTALL_DIR.mkdir(parents=True, exist_ok=True)
-    zip_path = INSTALL_DIR / "polycracker-ecu-v1.0.0-win64.zip"
+    zip_path = INSTALL_DIR / "polycracker-ecu-v1.1.0-win64.zip"
 
     print(f"Downloading Polycracker ECU v{__version__}...")
     try:

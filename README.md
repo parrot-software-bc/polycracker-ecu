@@ -104,8 +104,8 @@ polycracker-ecu run
 
 *(Testing from a local clone? Run `pip install -e .` in step 1.)*
 
-> **Security Note — Unsigned `v1.0.0` Binary (SmartScreen / Defender / Smart App Control):**
-> `Polycracker-ECU.exe` is an unsigned initial release (no Authenticode code-signing certificate yet). `polycracker-ecu install` automatically verifies the download against the official SHA-256 checksum (`SHA256SUMS.txt` on GitHub Releases), and the `v1.0.0` hashes have been submitted to Microsoft Security Intelligence for analysis.
+> **Security Note — Unsigned `v1.1.0` Binary (SmartScreen / Defender / Smart App Control):**
+> `Polycracker-ECU.exe` is an unsigned initial release (no Authenticode code-signing certificate yet). `polycracker-ecu install` automatically verifies the download against the official SHA-256 checksum (`SHA256SUMS.txt` on GitHub Releases), and the `v1.1.0` hashes have been submitted to Microsoft Security Intelligence for analysis.
 >
 > * **Windows SmartScreen:** Because the binary is unsigned, Windows may still show *"Windows protected your PC"* until the file builds download reputation. Click **More info → Run anyway** after verifying the SHA-256 hash.
 > * **Windows Defender:** If Defender still flags or quarantines `Polycracker-ECU.exe` while Microsoft's review propagates, allow it or add an exclusion for `%USERPROFILE%\.polycracker-ecu`.
